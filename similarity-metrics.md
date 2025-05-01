@@ -36,10 +36,10 @@ The class provides modular functions for comparing different kinds of data. Each
 - **Purpose**: Compares overlap between two lists of values.
 - **Input**: `(list_str1, list_str2, threshold, result)`
 - **Formula**:
-**Jaccard Similarity**
+
 
 ```math
-\text{Jaccard}(A, B) = \frac{|A \cap B|}{|A \cup B|}
+\text{Jaccard Similarity,  Jaccard}(A, B) = \frac{|A \cap B|}{|A \cup B|}
 ```
 - **Calculation Process**:
   1. Convert both comma-separated strings into sets.
