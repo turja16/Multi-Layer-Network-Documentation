@@ -36,9 +36,11 @@ The class provides modular functions for comparing different kinds of data. Each
 - **Purpose**: Compares overlap between two lists of values.
 - **Input**: `(list_str1, list_str2, threshold, result)`
 - **Formula**:
-<p align="center">
-  <img src="https://latex.codecogs.com/svg.image?\Jaccard(A,%20B)%20%3D%20\frac{|A%20\cap%20B|}{|A%20\cup%20B|}" alt="Jaccard Index Formula" />
-</p>
+**Jaccard Similarity*
+
+```math
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+```
 - **Calculation Process**:
   1. Convert both comma-separated strings into sets.
   2. Compute intersection and union.
