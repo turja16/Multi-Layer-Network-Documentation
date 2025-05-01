@@ -35,11 +35,11 @@ The class provides modular functions for comparing different kinds of data. Each
 
 - **Purpose**: Compares overlap between two lists of values.
 - **Input**: `(list_str1, list_str2, threshold, result)`
-- **Formula**:
+- **Formula**: Jaccard Similarity
 
 
 ```math
-\text{Jaccard Similarity,  Jaccard}(A, B) = \frac{|A \cap B|}{|A \cup B|}
+\text{Jaccard}(A, B) = \frac{|A \cap B|}{|A \cup B|}
 ```
 - **Calculation Process**:
   1. Convert both comma-separated strings into sets.
@@ -56,10 +56,12 @@ The class provides modular functions for comparing different kinds of data. Each
 
 - **Purpose**: Measures distance between two numeric vectors.
 - **Input**: `(list_str1, list_str2, threshold, result)`
-- **Formula**:
-  \[
+- **Formula**: Euclidean Distance
+
+```math
   d = \sqrt{\sum_{i=1}^{n} (x_i - y_i)^2}
-  \]
+```
+  
 - **Calculation Process**:
   1. Convert both strings to numeric lists.
   2. Apply the Euclidean distance formula.
@@ -74,10 +76,12 @@ The class provides modular functions for comparing different kinds of data. Each
 
 - **Purpose**: Measures similarity between two strings using cosine angle.
 - **Input**: `(text1, text2, threshold, result)`
-- **Formula**:
-  \[
+- **Formula**: Cosine Similarity
+
+```math
   \cos(\theta) = \frac{A \cdot B}{||A|| \cdot ||B||}
-  \]
+```
+  
 - **Calculation Process**:
   1. Clean text (lowercase, remove punctuation and stopwords).
   2. Vectorize text using bag-of-words (`CountVectorizer`).
@@ -137,10 +141,11 @@ The class provides modular functions for comparing different kinds of data. Each
 
 - **Purpose**: Measures the geospatial distance between two points.
 - **Input**: `(lon1, lat1, lon2, lat2, unit, threshold, result)`
-- **Formula**:
-  \[
-  d = 2r \cdot \arcsin\left(\sqrt{\sin^2\left(\frac{\Delta \phi}{2}\right) + \cos(\phi_1)\cos(\phi_2)\sin^2\left(\frac{\Delta \lambda}{2}\right)}\right)
-  \]
+- **Formula**: Haversine Distance
+
+  ```math
+  d = 2r \arcsin\left( \sqrt{\smash[b]{\sin^2\left(\frac{\Delta \phi}{2}\right) + \cos(\phi_1) \cos(\phi_2) \sin^2\left(\frac{\Delta \lambda}{2}\right)}} \right)
+  ```
 - **Calculation Process**:
   1. Parse latitude and longitude.
   2. Use Haversine formula (via `haversine` library).
