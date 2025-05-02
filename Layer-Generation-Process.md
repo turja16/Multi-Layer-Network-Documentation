@@ -69,7 +69,7 @@ nodeID2
 nodeID1,nodeID2,weight
 ```
 
-### 3.3 Sample Output File (Excerpt)
+### 3.3 Sample Output File
 
 ```
 movies_in_a_5year_period
