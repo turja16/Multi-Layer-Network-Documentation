@@ -1,4 +1,4 @@
-# Layer Generation Process Documentation
+# Layer Generation Process
 
 ## 1. Overview
 
